@@ -19,7 +19,7 @@ interface Params extends ParsedUrlQuery {
   blogId: Blog['id']
 }
 
-const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+const BlogId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   blog,
 }) => {
   return (
@@ -71,4 +71,4 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 }
 
-export default Blog
+export default BlogId

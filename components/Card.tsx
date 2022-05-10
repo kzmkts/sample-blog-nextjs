@@ -28,8 +28,24 @@ const Card = ({ blog }: Props) => {
               {blog.title}
             </h3>
             <div className="space-y-3">
-              <div className="text-sm">
-                投稿日:{moment(blog.publishedAt).format('YYYY-MM-DD')}
+              <div className="flex items-center text-sm">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span className="ml-1">
+                  {moment(blog.publishedAt).format('YYYY-MM-DD')}
+                </span>
               </div>
               <div className="text-sm font-semibold">
                 {blog.category ? (
@@ -40,7 +56,7 @@ const Card = ({ blog }: Props) => {
                   </Link>
                 ) : (
                   <span className="inline-block p-2 px-3 bg-green-700 rounded">
-                    未カテゴリー
+                    Uncategorized
                   </span>
                 )}
               </div>

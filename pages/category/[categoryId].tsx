@@ -32,7 +32,7 @@ const CategoryId: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           ))}
         </ul>
       ) : (
-        <p className="text-center">投稿が見つかりません</p>
+        <p className="text-center">Post not found</p>
       )}
     </Layout>
   )
